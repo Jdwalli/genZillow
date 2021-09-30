@@ -11,8 +11,8 @@ from nltk.stem import WordNetLemmatizer
 
 def train_func():
     lemmatizer = WordNetLemmatizer()
-    nltk.download("punkt")
-    nltk.download("wordnet")
+    nltk.download("punkt", download_dir='tools/punkt')
+    nltk.download("wordnet",  download_dir='tools/wordnet') 
 
     training = []
     words = []
