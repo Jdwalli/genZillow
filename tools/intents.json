@@ -1,0 +1,92 @@
+{"intents": [
+    {
+        "tag": "greeting",
+        "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+        "responses": ["Hello!", "Howdy!", "Hi there, how can I help?", "Whats up!", "Why hello there!"]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": ["See you later!", "Adios", "Have a fantastic day", "Bye! If you have more questions let me know!"]
+    },
+    {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful"],
+        "responses": ["Always", "Happy to help!", "You are most welcome", "You're welcome"]
+    },
+    {
+        "tag": "Name",
+        "patterns": ["What is your name?", "Name", "Tell me your name", "Who are you?"],
+        "responses": ["Zilly is my name, housing is the game!", "My name is Zilly", "Hi! My name is Zilly"]
+    },
+    {
+        "tag": "Purpose",
+        "patterns": ["What do you do?","How do you work?", "WHat is your purpose"],
+        "responses": ["I am here to help make your house buying process easier by answering all your questions.", "I am here to help answer your homebuying questions"]
+    },
+    {
+        "tag": "feelings",
+        "patterns": ["How are you?", "How are you feeling?", "How do you feel!"],
+        "responses": ["I am great!", "I feel amazing", "I'm just happy that I can help you!"]
+    },
+    {
+        "tag": "askings",
+        "patterns": ["What are some things I can ask?"],
+        "responses": ["Ask me what a morgage is!", "Ask me what a credit score is!", "Ask me how the homebuying process works!", "You can ask me many questions about homebuying. For example 'What is a morgage'"]
+    },
+
+    {
+        "tag": "creation",
+        "patterns": ["Who created you?", "who is your master", "where did you come from?"],
+        "responses": ["<a href = https://docs.google.com/presentation/d/1cIfsY5wMt4N4W5vGTHL-5gW2TetDb17T8xC5FufSxoY/edit?usp=sharing>Team genZillow from Howard University!</a>", "<a href = https://docs.google.com/presentation/d/1cIfsY5wMt4N4W5vGTHL-5gW2TetDb17T8xC5FufSxoY/edit?usp=sharing>A special team of engineers at Howard University</a>", "<a href = https://docs.google.com/presentation/d/1cIfsY5wMt4N4W5vGTHL-5gW2TetDb17T8xC5FufSxoY/edit?usp=sharing>genZillow of course!</a>"]
+    },
+
+
+
+    {
+        "tag" : "homebuying",
+        "patterns" : ["What is homebuying?", "Define homebuying", "Explain what homebuying is"], 
+        "responses" : ["The homebuying process includes finding a place, securing financing, making an offer, obtaining a home inspection, and closing the deal."]
+    },
+
+
+
+    {
+        "tag": "morgage",
+        "patterns": ["What is a morgage?", "Describe a morgage", "Details of a morgage"],
+        "responses": ["A mortgage is an agreement between you and a lender that gives the lender the right to take your property if you fail to repay the money you've borrowed plus interest.\n<b>Seven things to look for in a mortgage</b>\n <b>The size of the loan </b> <b>The interest rate and any associated points </b><b> The closing costs of the loan, including the lender's fees </b><b> The Annual Percentage Rate (APR) </b><b>The type of interest rate and whether it can change (is it fixed or adjustable?) </b><b> The loan term, or how long you have to repay the loan </b><b>Whether the loan has other risky features, such as a pre-payment penalty, a balloon clause, an interest-only feature, or negative amortization </b>"]
+    },
+    
+
+    {
+        "tag": "Amortization",
+        "patterns": ["What is a Amortization?", "Describe a Amortization", "Details of a Amortization"],
+        "responses": ["Amortization is an accounting technique used to periodically lower the book value of a loan or intangible asset over a set period of time."]
+    },
+
+
+    {
+        "tag" : "credit-score",
+        "patterns": ["What is a credit score", "credit score", "Define a credit score"],
+        "responses": ["A credit score is a number between 300–850 that depicts a consumer's creditworthiness. The higher the score, the better a borrower looks to potential lenders. A credit score is based on credit history: number of open accounts, total levels of debt, and repayment history, and other factors."]
+    },
+
+    {
+        "tag" : "realestate broker",
+        "patterns" : ["What is a real estate broker", "Define a real estate broker", "What is a real estate agent", "What is a realtor", "Who sells us houses"], 
+        "responses" : ["A real estate broker, real estate agent or realtor is a person who represents sellers or buyers of real estate or real property. While a broker may work independently, an agent usually works under a licensed broker to represent clients."]
+    },
+
+    {
+        "tag" : "assessor",
+        "patterns" : ["What is a assessor?", "Define a assessor", "Please tell me what is an assessor"],
+        "responses" : ["A public official who establishes the value of a property for taxation purposes."]
+    },
+
+    {
+        "tag" : "Gentrification",
+        "patterns" : ["What is Gentrification?", "Define Gentrification"],
+        "responses" : ["the process whereby the character of a poor urban area is changed by wealthier people moving in, improving housing, and attracting new businesses, typically displacing current inhabitants in the process."]
+    }
+]
+}
