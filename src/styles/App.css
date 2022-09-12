@@ -1,0 +1,222 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #055ddb;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.form-input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #0d4599;
+  color: white;
+  padding: 15px 20px;
+  transition: 0.2s ease;
+  text-align: center;
+  font-size: bold;
+  font-size: 1.23rem;
+}
+
+.chatbot-area {
+  background-color: #055ddb;
+  color: #fff;
+  height: 100vh;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 92vmin;
+}
+
+.chatbot {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* background-color: #006AFF; */
+  color: white;
+}
+
+.chatbot-header {
+  width: 100%;
+  height: 25px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1000;
+}
+
+.chatbot-header p {
+  margin-top: 3rem;
+  margin-left: 30px;
+  font-size: 36px;
+}
+
+.chatbot-main {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  padding-bottom: 0px;
+}
+
+.chatbot-body {
+  top: 0px;
+  width: 100%;
+  height: auto;
+  max-height: 80%;
+  position: relative;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.chatbot-bot {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.chatbot-user {
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.chatbot-bot .chat {
+  max-width: 300px;
+  position: relative;
+  left: 0px;
+  top: 10px;
+  padding: 15px 20px;
+  border-radius: 0px 10px 10px 10px;
+  color: white;
+  transition: 0.2s ease;
+  background-color: #0d4599;
+}
+
+.chatbot-user .chat {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  padding: 15px 20px;
+  border-radius: 10px 0px 10px 10px;
+  background: hsl(47, 64%, 49%);
+  transition: 0.2s ease;
+}
+
+.bottom-cont {
+  position: absolute;
+  bottom: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.4s ease;
+  transform: scale(0.9);
+}
+
+.rent-component {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+}
+
+.rent-component .rent {
+  position: relative;
+}
+
+.rent-component .rent .input {
+  width: 200px;
+  height: 100px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 45px;
+  background-color: #0d4599;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.rent-component .rent .symbol {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.choice-component {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+}
+
+.choice-component .choice-area {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: auto;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.choice {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0d4599;
+  border: 2px solid #0d4599;
+  margin-right: 5px;
+  border-radius: 10px;
+  transform: scale(0.9);
+  transition: 0.2s ease;
+  cursor: pointer;
+  color: white;
+}

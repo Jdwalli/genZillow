@@ -1,4 +1,4 @@
 # genZillow
 
-![](./client/assets/genZillow.png)
+![](./assets/genZillow.png)
 

@@ -1,7 +1,0 @@
-tensorflow 
-keras 
-pickle
-nltk
-flask
-pandas 
-numpy
