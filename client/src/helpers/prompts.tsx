@@ -1,7 +1,7 @@
 export const roomatePromps = [
   {
     prompt: 1,
-    zilly: "Hi! My name is Zilly! I am here to help you find the perfect roomate!",
+    zilly: `Hello! My name is Zilly! I am here to help you find the perfect roomate!`,
   },
   {
     prompt: 2,
@@ -9,11 +9,11 @@ export const roomatePromps = [
   },
   {
     prompt: 3,
-    zilly: "My name is {}",
+    zilly: "My name is {}!",
   },
   {
     prompt: 4,
-    zilly: "Nice to meet you {}! First question, how clean are you?",
+    zilly: `It's great to meet you {}! First question! How do you characterize your cleanliness`,
   },
   {
     prompt: 5,
@@ -25,7 +25,7 @@ export const roomatePromps = [
   },
   {
     prompt: 7,
-    zilly: "I am most definitely a {} person!",
+    zilly: "I am most definitely a {}!",
   },
   {
     prompt: 8,
@@ -65,7 +65,7 @@ export const roomatePromps = [
   {
     prompt: 16,
     zilly:
-      "Right now I am {}!",
+      "{}",
   },
   {
     prompt: 17,
@@ -79,26 +79,16 @@ export const roomatePromps = [
   {
     prompt: 19,
     zilly:
-      "That's cool {}! What type of pets do you have?",
-  },
-  {
-    prompt: 20,
-    zilly:
-      "I have a pet {}!",
-  },
-  {
-    prompt: 20,
-    zilly:
       "Final question {}! Do you have a gender preference?",
   },
   {
-    prompt: 21,
+    prompt: 20,
     zilly:
       "{}",
   },
   {
-    prompt: 22,
+    prompt: 21,
     zilly:
-      "Thank you {}! We will show a selection of great roomates shortly! Have a nice day",
+      "Thank you {}! We will show a selection of great roomates shortly! Have a nice day!",
   },
 ];

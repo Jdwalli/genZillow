@@ -5,8 +5,8 @@ import { BotReply } from "../types/bot";
 
 export const HandleBotReply: FunctionComponent<BotReply> = (props: BotReply) => {
     return (
-      <div className="bot-cont">
-        <span className="bot-chat">
+      <div className="chatbot-bot">
+        <span className="chat">
           {props.prompt === 4 && props.data
             ? props.chat.replace("{}", props.data)
             : props.prompt === 6 && props.data
@@ -17,7 +17,12 @@ export const HandleBotReply: FunctionComponent<BotReply> = (props: BotReply) => 
             ? props.chat.replace("{}", props.data)
             : props.prompt === 11 && props.data
             ? props.chat.replace("{}", props.data)
+            : props.prompt === 19 && props.data
+            ? props.chat.replace("{}", props.data)
+            : props.prompt === 21 && props.data
+            ? props.chat.replace("{}", props.data)
             : props.chat
+            
             
             
             }
@@ -28,8 +33,8 @@ export const HandleBotReply: FunctionComponent<BotReply> = (props: BotReply) => 
 
 export const HandleUserReply: FunctionComponent<BotReply> = (props: BotReply) => {
     return (
-      <div className="user-cont">
-        <span className="user-chat">
+      <div className="chatbot-user">
+        <span className="chat">
           {props.prompt === 3 && props.data
             ? props.chat.replace("{}", props.data)
             : props.prompt === 5 && props.data
@@ -43,6 +48,10 @@ export const HandleUserReply: FunctionComponent<BotReply> = (props: BotReply) =>
             : props.prompt === 14 && props.data
             ? props.chat.replace("{}", props.data)
             : props.prompt === 16 && props.data
+            ? props.chat.replace("{}", props.data)
+            : props.prompt === 18 && props.data
+            ? props.chat.replace("{}", props.data)
+            : props.prompt === 20 && props.data
             ? props.chat.replace("{}", props.data)
             : props.chat}
         </span>
