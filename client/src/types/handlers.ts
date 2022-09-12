@@ -36,3 +36,7 @@ export interface PetTypeProps {
 export interface RomanticStatusProps {
     setRomanticStatus: Dispatch<SetStateAction<string>>;
 }
+
+export interface TextHelper {
+    data: string;
+}
