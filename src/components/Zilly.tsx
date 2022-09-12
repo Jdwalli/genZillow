@@ -8,7 +8,7 @@ import React, {
   SetStateAction,
 } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-import { roomatePromps } from "../helpers/prompts";
+import { roommatePrompts } from "../helpers/prompts";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 import { HandleBotReply, HandleUserReply } from "../helpers/replies";
 
@@ -126,28 +126,28 @@ const Zilly = () => {
           {startBot === true && (
             <>
               <HandleBotReply
-                chat={roomatePromps[0].zilly}
-                prompt={roomatePromps[0].prompt}
+                chat={roommatePrompts[0].zilly}
+                prompt={roommatePrompts[0].prompt}
               />
               <HandleBotReply
-                chat={roomatePromps[1].zilly}
-                prompt={roomatePromps[1].prompt}
+                chat={roommatePrompts[1].zilly}
+                prompt={roommatePrompts[1].prompt}
               />
             </>
           )}
           {name !== "" && (
             <HandleUserReply
               data={name}
-              chat={roomatePromps[2].zilly}
-              prompt={roomatePromps[2].prompt}
+              chat={roommatePrompts[2].zilly}
+              prompt={roommatePrompts[2].prompt}
             />
           )}
           <div></div>
 
           {showCleanlinessLevel && (
             <HandleBotReply
-              chat={roomatePromps[3].zilly}
-              prompt={roomatePromps[3].prompt}
+              chat={roommatePrompts[3].zilly}
+              prompt={roommatePrompts[3].prompt}
               data={name}
             />
           )}
@@ -158,15 +158,15 @@ const Zilly = () => {
           {preferedCleanliness !== "" && (
             <HandleUserReply
               data={preferedCleanliness.toLowerCase()}
-              prompt={roomatePromps[4].prompt}
-              chat={roomatePromps[4].zilly}
+              prompt={roommatePrompts[4].prompt}
+              chat={roommatePrompts[4].zilly}
             />
           )}
 
           {preferedCleanliness !== "" && (
             <HandleBotReply
-              chat={roomatePromps[5].zilly}
-              prompt={roomatePromps[5].prompt}
+              chat={roommatePrompts[5].zilly}
+              prompt={roommatePrompts[5].prompt}
               data={name}
             />
           )}
@@ -177,23 +177,23 @@ const Zilly = () => {
           {preferedLifestyle !== "" && (
             <HandleUserReply
               data={preferedLifestyle.toLowerCase()}
-              prompt={roomatePromps[6].prompt}
-              chat={roomatePromps[6].zilly}
+              prompt={roommatePrompts[6].prompt}
+              chat={roommatePrompts[6].zilly}
             />
           )}
 
           {preferedLifestyle !== "" && (
             <HandleBotReply
-              chat={roomatePromps[7].zilly}
-              prompt={roomatePromps[7].prompt}
+              chat={roommatePrompts[7].zilly}
+              prompt={roommatePrompts[7].prompt}
               data={preferedLifestyle.toLowerCase()}
             />
           )}
 
           {preferedLifestyle !== "" && (
             <HandleBotReply
-              chat={roomatePromps[8].zilly}
-              prompt={roomatePromps[8].prompt}
+              chat={roommatePrompts[8].zilly}
+              prompt={roommatePrompts[8].prompt}
               data={""}
             />
           )}
@@ -203,15 +203,15 @@ const Zilly = () => {
           {monthlyRent !== "" && (
             <HandleUserReply
               data={monthlyRent}
-              chat={roomatePromps[9].zilly}
-              prompt={roomatePromps[9].prompt}
+              chat={roommatePrompts[9].zilly}
+              prompt={roommatePrompts[9].prompt}
             />
           )}
 
           {monthlyRent !== "" && (
             <HandleBotReply
-              chat={roomatePromps[10].zilly}
-              prompt={roomatePromps[10].prompt}
+              chat={roommatePrompts[10].zilly}
+              prompt={roommatePrompts[10].prompt}
               data={name}
             />
           )}
@@ -223,15 +223,15 @@ const Zilly = () => {
           {smokingStatus !== "" && (
             <HandleUserReply
               data={smokingStatus}
-              chat={roomatePromps[11].zilly}
-              prompt={roomatePromps[11].prompt}
+              chat={roommatePrompts[11].zilly}
+              prompt={roommatePrompts[11].prompt}
             />
           )}
 
           {smokingStatus !== "" && (
             <HandleBotReply
-              chat={roomatePromps[12].zilly}
-              prompt={roomatePromps[12].prompt}
+              chat={roommatePrompts[12].zilly}
+              prompt={roommatePrompts[12].prompt}
               data={name}
             />
           )}
@@ -243,15 +243,15 @@ const Zilly = () => {
           {drinkingStatus !== "" && (
             <HandleUserReply
               data={drinkingStatus}
-              chat={roomatePromps[13].zilly}
-              prompt={roomatePromps[13].prompt}
+              chat={roommatePrompts[13].zilly}
+              prompt={roommatePrompts[13].prompt}
             />
           )}
 
           {drinkingStatus !== "" && (
             <HandleBotReply
-              chat={roomatePromps[14].zilly}
-              prompt={roomatePromps[14].prompt}
+              chat={roommatePrompts[14].zilly}
+              prompt={roommatePrompts[14].prompt}
               data={name}
             />
           )}
@@ -263,15 +263,15 @@ const Zilly = () => {
           {romanticStatus !== "" && (
             <HandleUserReply
               data={romanticStatus}
-              chat={roomatePromps[15].zilly}
-              prompt={roomatePromps[15].prompt}
+              chat={roommatePrompts[15].zilly}
+              prompt={roommatePrompts[15].prompt}
             />
           )}
 
           {romanticStatus !== "" && (
             <HandleBotReply
-              chat={roomatePromps[16].zilly}
-              prompt={roomatePromps[16].prompt}
+              chat={roommatePrompts[16].zilly}
+              prompt={roommatePrompts[16].prompt}
               data={name}
             />
           )}
@@ -281,16 +281,16 @@ const Zilly = () => {
           {petStatus !== "" && (
             <HandleUserReply
               data={name}
-              chat={roomatePromps[17].zilly}
-              prompt={roomatePromps[17].prompt}
+              chat={roommatePrompts[17].zilly}
+              prompt={roommatePrompts[17].prompt}
             />
           )}
 
           {petStatus !== "" && (
             <HandleBotReply
               data={name}
-              chat={roomatePromps[18].zilly}
-              prompt={roomatePromps[18].prompt}
+              chat={roommatePrompts[18].zilly}
+              prompt={roommatePrompts[18].prompt}
             />
           )}
 
@@ -301,14 +301,14 @@ const Zilly = () => {
           {genderPreference !== "" && (
             <HandleUserReply
               data={genderPreference}
-              chat={roomatePromps[19].zilly}
-              prompt={roomatePromps[19].prompt}
+              chat={roommatePrompts[19].zilly}
+              prompt={roommatePrompts[19].prompt}
             />
           )}
           {genderPreference !== "" && (
             <HandleBotReply
-              chat={roomatePromps[20].zilly}
-              prompt={roomatePromps[20].prompt}
+              chat={roommatePrompts[20].zilly}
+              prompt={roommatePrompts[20].prompt}
               data={name}
             />
           )}

@@ -1,7 +1,7 @@
-export const roomatePromps = [
+export const roommatePrompts = [
   {
     prompt: 1,
-    zilly: `Hello! My name is Zilly! I am here to help you find the perfect roomate!`,
+    zilly: `Hello! My name is Zilly! I am here to help you find the perfect roommate!`,
   },
   {
     prompt: 2,
@@ -89,6 +89,6 @@ export const roomatePromps = [
   {
     prompt: 21,
     zilly:
-      "Thank you {}! We will show a selection of great roomates shortly! Have a nice day!",
+      "Thank you {}! We will show a selection of great roommates shortly! Have a nice day!",
   },
 ];
