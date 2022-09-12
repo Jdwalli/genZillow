@@ -13,8 +13,8 @@ export const CleanlinessLevel: FunctionComponent<CleanlinessProps> = (
     }
     return (
       <>
-        <div className="goal-cont">
-          <div className="body">
+        <div className="choice-component">
+          <div className="choice-area">
             <button
               className={"choice"}
               data-goal="build muscle"

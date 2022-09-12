@@ -18,12 +18,11 @@ export const MonthlyRent: FunctionComponent<MonthlyRentProps> = (props: MonthlyR
 
 
 return (
-  <div className="weight-cont">
-
-      <div className="body">
-          <input type="number" onChange={(e) => handleChange(e)} onSubmit={(e) => console.log(e)}
-              placeholder={"0"} className="inp" />
-          <span className='msm'>$</span>
+  <div className="rent-component">
+      <div className="rent">
+          <input type="number" onChange={(e) => handleChange(e)}
+              placeholder={"0"} className="input" />
+          <span className='symbol'>$</span>
       </div>
   </div>
 )

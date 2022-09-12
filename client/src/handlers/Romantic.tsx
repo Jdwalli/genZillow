@@ -13,23 +13,23 @@ export const RomanticStatus: FunctionComponent<RomanticStatusProps> = (
     }
     return (
       <>
-        <div className="goal-cont">
-          <div className="body">
+        <div className="choice-component">
+          <div className="choice-area">
             <button
               className={"choice"}
-              onClick={() => updateRomanticStatus("Single")}
+              onClick={() => updateRomanticStatus("I am single!")}
             >
               <small>Single</small>
             </button>
             <button
               className={"choice"}
-              onClick={() => updateRomanticStatus("Dating")}
+              onClick={() => updateRomanticStatus("I am in a relationship!")}
             >
               <small>Dating</small>
             </button>
             <button
               className={"choice"}
-              onClick={() => updateRomanticStatus("Prefer not to say")}
+              onClick={() => updateRomanticStatus("Right now, I prefer not to say!")}
             >
               <small>Prefer not to say</small>
             </button>

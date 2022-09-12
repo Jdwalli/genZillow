@@ -14,18 +14,18 @@ export const SmokingStatus: FunctionComponent<SmokingProps> = (
   }
   return (
     <>
-      <div className="goal-cont">
+      <div className="choice-component">
 
-        <div className="body">
+        <div className="choice-area">
           <button
             className={"choice"}
-            onClick={() => updateCleanlinessLevel("Yes")}
+            onClick={() => updateCleanlinessLevel("do")}
           >
             <small>Yes</small>
           </button>
           <button
             className={"choice"}
-            onClick={() => updateCleanlinessLevel("No")}
+            onClick={() => updateCleanlinessLevel("do not")}
           >
             <small>No</small>
           </button>

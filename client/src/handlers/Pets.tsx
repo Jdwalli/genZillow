@@ -14,19 +14,19 @@ export const PetsStatus: FunctionComponent<PetProps> = (
     }
     return (
       <>
-        <div className="goal-cont">
-          <div className="body">
-            <button
-              className={"choice"}
-              onClick={() => updatePetStatus("None!")}
-            >
-              <small>No pets</small>
-            </button>
+        <div className="choice-component">
+          <div className="choice-area">
             <button
               className={"choice"}
               onClick={() => updatePetStatus("Yes!")}
             >
-              <small>Pets!</small>
+              <small>Yup!</small>
+            </button>
+            <button
+              className={"choice"}
+              onClick={() => updatePetStatus("None!")}
+            >
+              <small>None!</small>
             </button>
           </div>
         </div>
@@ -48,8 +48,8 @@ export const PetsStatus: FunctionComponent<PetProps> = (
     }
     return (
       <>
-        <div className="goal-cont">
-          <div className="body">
+        <div className="choice-component">
+          <div className="choice-area">
             <button
               className={"choice"}
               onClick={() => updatePetType("Dogs")}

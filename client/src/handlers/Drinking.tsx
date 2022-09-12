@@ -14,8 +14,8 @@ export const DrinkingStatus: FunctionComponent<DrinkingProps> = (
   }
   return (
     <>
-      <div className="goal-cont">
-        <div className="body">
+      <div className="choice-component">
+        <div className="choice-area">
           <button
             className={"choice"}
             onClick={() => updateCleanlinessLevel("Yes")}

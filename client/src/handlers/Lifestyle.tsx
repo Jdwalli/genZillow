@@ -14,14 +14,13 @@ export const LifestyleLevel: FunctionComponent<LifeStyleProps> = (props: LifeSty
     }
     return (
       <>
-        <div className="goal-cont">
-
-          <div className="body">
+        <div className="choice-component">
+          <div className="choice-area">
             <button
               className={"choice"}
-              onClick={() => updateCleanlinessLevel("Social")}
+              onClick={() => updateCleanlinessLevel("Social Person")}
             >
-              <small>Social</small>
+              <small>Social Person</small>
             </button>
             <button
               className={"choice"}
