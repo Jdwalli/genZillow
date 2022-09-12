@@ -13,20 +13,20 @@ import { Formik, Field, Form, FormikHelpers } from "formik";
 import { HandleBotReply, HandleUserReply } from "../helpers/replies";
 
 // Question Handlers
-import { LifestyleLevel } from "../handlers/Lifestyle"
-import { CleanlinessLevel } from "../handlers/Cleanliness"
-import { MonthlyRent } from "../handlers/Rent"
+import { LifestyleLevel } from "../handlers/Lifestyle";
+import { CleanlinessLevel } from "../handlers/Cleanliness";
+import { MonthlyRent } from "../handlers/Rent";
 import { SmokingStatus } from "../handlers/Smoking";
 import { DrinkingStatus } from "../handlers/Drinking";
 import { RomanticStatus } from "../handlers/Romantic";
 import { PetsStatus, PetType } from "../handlers/Pets";
+import { GenderPreference } from "../handlers/Gender";
 
 const Zilly = () => {
   const [startBot, setStartBot] = useState(false); // Is the bot ready to run? (Should have a little timeout)
   const [preferences, setPreferences] = useState(false); // Whole JSON Object
   const [name, setName] = useState("");
 
-  // Questions to be asked
   const [showCleanlinessLevel, setShowCleanlinessLevel] = useState(false);
   const [preferedCleanliness, setPreferedCleanliness] = useState("");
 
@@ -34,10 +34,10 @@ const Zilly = () => {
   const [preferedLifestyle, setPreferedLifestyle] = useState("");
 
   const [showMonthlyRent, setShowMonthlyRent] = useState(false);
-  const [monthlyRent, setMonthlyRent] = useState("")
+  const [monthlyRent, setMonthlyRent] = useState("");
 
-  const [showSmokingQuestion, setShowSmokingQuestion ] = useState(false);
-  const [smokingStatus, setSmokingStatus] = useState("")
+  const [showSmokingQuestion, setShowSmokingQuestion] = useState(false);
+  const [smokingStatus, setSmokingStatus] = useState("");
 
   const [showDrinkingQuestion, setShowDrinkingQuestion] = useState(false);
   const [drinkingStatus, setDrinkingStatus] = useState("");
@@ -47,13 +47,11 @@ const Zilly = () => {
 
   const [showPetsQuestion, setShowPetsQuestion] = useState(false);
   const [petStatus, setPetStatus] = useState("");
-  const [petType, setPetType] = useState("");
 
-  const [showGenderPreferenceQuestion, setShowGenderPreferenceQuestion] = useState(false);
+  const [showGenderPreferenceQuestion, setShowGenderPreferenceQuestion] =
+    useState(false);
   const [genderPreference, setGenderPreference] = useState("");
 
-
-  const [lastQuestion, setLastQuestion] = useState(null);
 
   let counter = 0;
   useEffect(() => {
@@ -80,53 +78,51 @@ const Zilly = () => {
 
   useEffect(() => {
     if (preferedLifestyle !== "") {
-      setShowMonthlyRent(true)
+      setShowMonthlyRent(true);
     }
-}, [preferedLifestyle])
+  }, [preferedLifestyle]);
 
-useEffect(() => {
-  if (monthlyRent !== "") {
-    setShowSmokingQuestion(true)
-  }
-}, [monthlyRent])
+  useEffect(() => {
+    if (monthlyRent !== "") {
+      setShowSmokingQuestion(true);
+    }
+  }, [monthlyRent]);
 
-useEffect(() => {
-  if (smokingStatus !== "") {
-    setShowDrinkingQuestion(true)
-  }
-}, [smokingStatus])
+  useEffect(() => {
+    if (smokingStatus !== "") {
+      setShowDrinkingQuestion(true);
+    }
+  }, [smokingStatus]);
 
-useEffect(() => {
-  if (drinkingStatus !== "") {
-    setShowRomanceQuestion(true)
-  }
-}, [drinkingStatus])
+  useEffect(() => {
+    if (drinkingStatus !== "") {
+      setShowRomanceQuestion(true);
+    }
+  }, [drinkingStatus]);
 
-useEffect(() => {
-  if (romanticStatus !== "") {
-    setShowPetsQuestion(true)
-  }
-}, [romanticStatus])
+  useEffect(() => {
+    if (romanticStatus !== "") {
+      setShowPetsQuestion(true);
+    }
+  }, [romanticStatus]);
 
-useEffect(() => {
-  if (petStatus !== "") {
-    setShowGenderPreferenceQuestion(true)
-  }
-}, [petStatus])
-
-
+  useEffect(() => {
+    if (petStatus !== "") {
+      setShowGenderPreferenceQuestion(true);
+    }
+  }, [petStatus]);
 
   interface Values {
     name: string;
   }
 
   return (
-    <div className="onboarding-cont">
-      <div className="top-head">
+    <div className="chatbot">
+      <div className="chatbot-header">
         <p>Zilly</p>
       </div>
-      <div className="chat-main">
-        <ScrollToBottom className="chat-body">
+      <div className="chatbot-main">
+        <ScrollToBottom className="chatbot-body">
           {startBot === true && (
             <>
               <HandleBotReply
@@ -161,7 +157,7 @@ useEffect(() => {
           )}
           {preferedCleanliness !== "" && (
             <HandleUserReply
-              data={preferedCleanliness}
+              data={preferedCleanliness.toLowerCase()}
               prompt={roomatePromps[4].prompt}
               chat={roomatePromps[4].zilly}
             />
@@ -180,7 +176,7 @@ useEffect(() => {
           )}
           {preferedLifestyle !== "" && (
             <HandleUserReply
-              data={preferedLifestyle}
+              data={preferedLifestyle.toLowerCase()}
               prompt={roomatePromps[6].prompt}
               chat={roomatePromps[6].zilly}
             />
@@ -190,7 +186,7 @@ useEffect(() => {
             <HandleBotReply
               chat={roomatePromps[7].zilly}
               prompt={roomatePromps[7].prompt}
-              data={preferedLifestyle}
+              data={preferedLifestyle.toLowerCase()}
             />
           )}
 
@@ -204,162 +200,150 @@ useEffect(() => {
 
           {showMonthlyRent && <MonthlyRent setMonthlyRent={setMonthlyRent} />}
 
-          {monthlyRent !== "" && <HandleUserReply data={monthlyRent} chat={roomatePromps[9].zilly} prompt={roomatePromps[9].prompt} />}
+          {monthlyRent !== "" && (
+            <HandleUserReply
+              data={monthlyRent}
+              chat={roomatePromps[9].zilly}
+              prompt={roomatePromps[9].prompt}
+            />
+          )}
 
-          {monthlyRent !== "" && <HandleBotReply chat={roomatePromps[10].zilly} prompt={roomatePromps[10].prompt} data={name} />}
+          {monthlyRent !== "" && (
+            <HandleBotReply
+              chat={roomatePromps[10].zilly}
+              prompt={roomatePromps[10].prompt}
+              data={name}
+            />
+          )}
 
+          {showSmokingQuestion && (
+            <SmokingStatus setSmokingStatus={setSmokingStatus} />
+          )}
 
-          {showSmokingQuestion && <SmokingStatus setSmokingStatus={setSmokingStatus} />}
+          {smokingStatus !== "" && (
+            <HandleUserReply
+              data={smokingStatus}
+              chat={roomatePromps[11].zilly}
+              prompt={roomatePromps[11].prompt}
+            />
+          )}
 
-          {smokingStatus !== "" && <HandleUserReply data={smokingStatus} chat={roomatePromps[11].zilly} prompt={roomatePromps[11].prompt} />}
+          {smokingStatus !== "" && (
+            <HandleBotReply
+              chat={roomatePromps[12].zilly}
+              prompt={roomatePromps[12].prompt}
+              data={name}
+            />
+          )}
 
-          {smokingStatus !== "" && <HandleBotReply chat={roomatePromps[12].zilly} prompt={roomatePromps[12].prompt} data={name} />}
+          {showDrinkingQuestion && (
+            <DrinkingStatus setDrinkingStatus={setDrinkingStatus} />
+          )}
 
+          {drinkingStatus !== "" && (
+            <HandleUserReply
+              data={drinkingStatus}
+              chat={roomatePromps[13].zilly}
+              prompt={roomatePromps[13].prompt}
+            />
+          )}
 
-          {showDrinkingQuestion && <DrinkingStatus setDrinkingStatus={setDrinkingStatus} />}
+          {drinkingStatus !== "" && (
+            <HandleBotReply
+              chat={roomatePromps[14].zilly}
+              prompt={roomatePromps[14].prompt}
+              data={name}
+            />
+          )}
 
-          {drinkingStatus !== "" && <HandleUserReply data={drinkingStatus} chat={roomatePromps[13].zilly} prompt={roomatePromps[13].prompt} />}
+          {showRomanceQuestion && (
+            <RomanticStatus setRomanticStatus={setRomanticStatus} />
+          )}
 
-          {drinkingStatus !== "" && <HandleBotReply chat={roomatePromps[14].zilly} prompt={roomatePromps[14].prompt} data={name} />}
-          
+          {romanticStatus !== "" && (
+            <HandleUserReply
+              data={romanticStatus}
+              chat={roomatePromps[15].zilly}
+              prompt={roomatePromps[15].prompt}
+            />
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {showRomanceQuestion && <RomanticStatus setRomanticStatus={setRomanticStatus} />}
-
-          {romanticStatus !== "" && <HandleUserReply data={romanticStatus} chat={roomatePromps[15].zilly} prompt={roomatePromps[15].prompt} />}
-
-          {romanticStatus !== "" && <HandleBotReply chat={roomatePromps[16].zilly} prompt={roomatePromps[16].prompt} data={name} />}
-
+          {romanticStatus !== "" && (
+            <HandleBotReply
+              chat={roomatePromps[16].zilly}
+              prompt={roomatePromps[16].prompt}
+              data={name}
+            />
+          )}
 
           {showPetsQuestion && <PetsStatus setPetStatus={setPetStatus} />}
 
-          {petStatus !== "" && <HandleUserReply data={petStatus} chat={roomatePromps[17].zilly} prompt={roomatePromps[17].prompt} />}
+          {petStatus !== "" && (
+            <HandleUserReply
+              data={name}
+              chat={roomatePromps[17].zilly}
+              prompt={roomatePromps[17].prompt}
+            />
+          )}
 
-          {petStatus === "Yes!" && <HandleBotReply chat={roomatePromps[18].zilly} prompt={roomatePromps[18].prompt} data={name} />}
+          {petStatus !== "" && (
+            <HandleBotReply
+              data={name}
+              chat={roomatePromps[18].zilly}
+              prompt={roomatePromps[18].prompt}
+            />
+          )}
 
-          {petStatus === "Yes!" && <PetType setPetType={setPetType} />}
+          {showGenderPreferenceQuestion && (
+            <GenderPreference setGenderPreference={setGenderPreference} />
+          )}
 
-          {petStatus === "Yes!" && <HandleUserReply data={petType} chat={roomatePromps[19].zilly} prompt={roomatePromps[19].prompt} />}
-
-
-          {showRomanceQuestion && <RomanticStatus setRomanticStatus={setRomanticStatus} />}
-
-          {romanticStatus !== "" && <HandleUserReply data={romanticStatus} chat={roomatePromps[15].zilly} prompt={roomatePromps[15].prompt} />}
-
-          {romanticStatus !== "" && <HandleBotReply chat={roomatePromps[16].zilly} prompt={roomatePromps[16].prompt} data={name} />}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
-          
-          
-          
-          
-          
-          {/* 
-                   
-
-                    {(gender !== "" && lastquest === true) && <BotReplies chat={botQuestions[10].quest} next={botQuestions[10].next} data={username} />} */}
+          {genderPreference !== "" && (
+            <HandleUserReply
+              data={genderPreference}
+              chat={roomatePromps[19].zilly}
+              prompt={roomatePromps[19].prompt}
+            />
+          )}
+          {genderPreference !== "" && (
+            <HandleBotReply
+              chat={roomatePromps[20].zilly}
+              prompt={roomatePromps[20].prompt}
+              data={name}
+            />
+          )}
         </ScrollToBottom>
         <br />
-        {/* <div className="bottom-cont">
-                    <button className="btn btn-block continue-btn" disabled={lastquest === null ? true : false} onClick={() => saveUserInfo()}>
-                        Continue  <FaArrowRight className='icon' />
-                    </button>
-                </div> */}
-
-
-        {name === "" ? <div className="bottom-cont">
-          <Formik
-            initialValues={{
-              name: "",
-            }}
-            onSubmit={(
-              values: Values,
-              { setSubmitting }: FormikHelpers<Values>
-            ) => {
-              setTimeout(() => {
-                setName(values.name);
-                setSubmitting(false);
-              }, 500);
-            }}
-          >
-            <Form className="bottom-cont">
-              <label htmlFor="name">Name</label>
-              <Field id="name" name="name" placeholder="Name!" />
-            </Form>
-          </Formik>
-        </div> : null}
-        
+        {name === "" ? (
+          <div className="bottom-cont">
+            <Formik
+              initialValues={{
+                name: "",
+              }}
+              onSubmit={(
+                values: Values,
+                { setSubmitting }: FormikHelpers<Values>
+              ) => {
+                setTimeout(() => {
+                  setName(values.name);
+                  setSubmitting(false);
+                }, 500);
+              }}
+            >
+              <Form className="bottom-cont">
+                <Field
+                  id="name"
+                  className="form-input"
+                  name="name"
+                  placeholder="What is your name?"
+                />
+              </Form>
+            </Formik>
+          </div>
+        ) : null}
       </div>
-      
     </div>
   );
 };
 
 export default Zilly;
-
-
